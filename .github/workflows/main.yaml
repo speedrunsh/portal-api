@@ -1,0 +1,11 @@
+name: Portal API
+on: [push, pull_request]
+jobs:
+  make-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: go
+        run: make go
+      - name: Validate clean git state
+        run: git diff --exit-code

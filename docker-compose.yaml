@@ -1,0 +1,9 @@
+version: "2"
+services:
+  portal-api-go:
+    build:
+      context: .
+      dockerfile: Dockerfile-go
+    command: bash -c "cd go && make all"
+    volumes:
+      - ./:/portal-api

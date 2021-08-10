@@ -1,0 +1,18 @@
+syntax = "proto3";
+option go_package = "github.com/dpogorzelski/portal-api/go/service";
+package service;
+
+message Empty {}
+
+message Response{
+  string content = 1;
+}
+
+message Service{
+  string name = 1;
+}
+
+service Portal{
+  rpc Ping(Empty) returns (Empty) {}
+  rpc ServiceRestart(Service) returns (Response) {}
+}
