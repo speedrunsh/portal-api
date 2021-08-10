@@ -1,4 +1,4 @@
-module github.com/dpogorzelski/portal-api/go
+module github.com/speedrunsh/portal-api/go
 
 go 1.17
 

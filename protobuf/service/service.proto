@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/dpogorzelski/portal-api/go/service";
+option go_package = "github.com/speedrunsh/portal-api/go/service";
 package service;
 
 message Empty {}
