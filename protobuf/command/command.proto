@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/speedrunsh/portal-api/go/portal";
+option go_package = "github.com/speedrunsh/portal-api/command";
 package command;
 
 message Response{
