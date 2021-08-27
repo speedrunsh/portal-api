@@ -31,7 +31,7 @@ func NewPortalClient(cc grpc.ClientConnInterface) PortalClient {
 
 func (c *portalClient) RunCommand(ctx context.Context, in *Command, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/portal.Portal/RunCommand", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/command.Portal/RunCommand", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -76,7 +76,7 @@ func _Portal_RunCommand_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/portal.Portal/RunCommand",
+		FullMethod: "/command.Portal/RunCommand",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PortalServer).RunCommand(ctx, req.(*Command))
@@ -88,7 +88,7 @@ func _Portal_RunCommand_Handler(srv interface{}, ctx context.Context, dec func(i
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Portal_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "portal.Portal",
+	ServiceName: "command.Portal",
 	HandlerType: (*PortalServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

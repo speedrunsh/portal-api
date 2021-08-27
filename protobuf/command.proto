@@ -1,6 +1,6 @@
 syntax = "proto3";
 option go_package = "github.com/speedrunsh/portal-api/go/portal";
-package portal;
+package command;
 
 message Response{
   string content = 1;
